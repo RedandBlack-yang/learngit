@@ -110,3 +110,36 @@ git push origin master
 
 即GitHub仓库中的ssh下的命令
 
+## 分支管理
+
+### 创建合并分支
+
+```
+git checkout -b dev	#创建dev分支  -b表示创建并切换
+git branch     		#查看分支,当前分支前有*
+git checkout master	#切换回master,发现在branch中的修改没有改变
+# git merge	dev		#将dev分支的工作合并到master
+```
+
+git checkout master 与 git switch master 等价
+
+### 分支命令
+
+查看分支：`git branch`
+
+创建分支：`git branch <name>`
+
+切换分支：`git checkout <name>`或者`git switch <name>`
+
+创建+切换分支：`git checkout -b <name>`或者`git switch -c <name>`
+
+合并某分支到当前分支：`git merge <name>`
+
+删除分支：`git branch -d <name>`
+
+### 合并分支冲突
+
+当使用两个分支修改同一文件后同提交会出现冲突,需手动解决冲突
+
+
+
