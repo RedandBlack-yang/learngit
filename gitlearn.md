@@ -70,3 +70,43 @@ git checkout --test.txt	#用版本库中的替换工作区的
 
 
 
+## 远程仓库
+
+### 创建SSH Key
+
+```
+ssh-keygen -t rsa -C "github的邮件地址"	#创建SSH Key
+cd ~/.ssh		#到用户主目录
+ls				#查看是否存在id_rsa  id_rsa.pub
+cat	id_rsa.pub 			#打开文件查看密钥
+```
+
+将密钥添加到GitHub
+
+### 添加远程仓库
+
+```
+ git remote add origin 仓库的ssh地址		#GitHub的用户名最好仅由字母数字组成
+ git push -u origin master		#
+```
+
+由于远程库是空的，我们第一次推送`master`分支时，加上了`-u`参数，Git不但会把本地的`master`分支内容推送的远程新的`master`分支，还会把本地的`master`分支和远程的`master`分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+从此,提交本地仓库,只需如下命令
+
+```
+git push origin master
+```
+
+注:如果出现Are you sure you want to continue connecting (yes/no)?  输入yes即可
+
+### 从远程库克隆
+
+#### 在github创建新的仓库
+
+勾选Initialize this repository with a README
+
+#### 使用git clone 克隆一个本地库
+
+即GitHub仓库中的ssh下的命令
+
