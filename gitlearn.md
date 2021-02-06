@@ -34,6 +34,12 @@ git status		#仓库变干净了
 
 **git add -A** ：是上面两个功能的合集（git add --all的缩写）
 
+### commit 使用命令修改注释：
+
+```
+git commit --amend		# 进入vim模式修改注释
+```
+
 ## 版本回退
 
 ### git log查看历史记录
