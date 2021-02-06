@@ -120,7 +120,9 @@ git push origin master
 
 #### 使用git clone 克隆一个本地库
 
-即GitHub仓库中的ssh下的命令
+```
+git clone GitHub地址
+```
 
 ## 分支管理
 
